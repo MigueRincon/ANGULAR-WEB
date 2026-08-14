@@ -1,1 +1,16 @@
-<p>usuario works!</p>
+<p>Nombre: {{ nombre}}</p>
+<p>Edad: {{ edad }}</p>
+<p>Estado: {{ activo ? 'activo' : 'Inactivo' }}</p>
+<p>En 5 años: {{ edad + 5 }}</p>
+
+<!-- Cambiar el src de una imagen dinamicamente -->
+<img [src]="'https://www.vodafone.es/c/tienda/tol/img/1500358782029/listado-redmi-pad2-gris-128gb/'" [alt]="nombre">
+
+<!-- Deshabilitar un boton segun una condicion -->
+<button [disabled]="!activo">Enviar</button>
+
+<!-- Afrefar una clase CSS condicionalmente -->
+<div [class.activo]="activo">Contenido</div>
+
+<!-- Cambiar un estilo inline -->
+<p> <div [style.color]="activo ? 'green' : 'red'">Estado</div>
